@@ -3,6 +3,7 @@
 
 > **"I will, in fact, claim that the difference between a bad programmer and a good one is whether [they] consider [their] code or [their] data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."**
 > — Linus Torvalds
+
 > **"Smart data structures and dumb code works a lot better than the other way around."**
 > — Eric S. Raymond
 
