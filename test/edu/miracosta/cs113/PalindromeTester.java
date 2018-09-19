@@ -76,4 +76,4 @@ public class PalindromeTester {
 
     }
 
-}
+} // End of class PalindromeTest

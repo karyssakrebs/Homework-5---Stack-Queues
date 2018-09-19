@@ -1,6 +1,8 @@
 # CS113-HW06-StackPalindrome
 ## HW #6 for CS113 - Palindrome using Stacks
 
+*[Insert Build Status Image]*
+
 > **"I will, in fact, claim that the difference between a bad programmer and a good one is whether [they] consider [their] code or [their] data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."**
 > — Linus Torvalds
 
