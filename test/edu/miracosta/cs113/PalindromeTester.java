@@ -6,18 +6,48 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+/**
+ * PalindromeTester : a test class for isPalindrome, a method intended to utilize stacks to evaluate if a given
+ * string is a palindrome.
+ *
+ * A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards as it does
+ * forwards. Such sequences include "madam," "top spot," or "no lemon, no melon".
+ */
 public class PalindromeTester {
 
+    /** True test cases which include spaces and symbols */
+    private static final String[] SIMPLE_TRUE = { "", " ", "A", "7", "%", "  ", "BB", "33", "**" };
+    /** False test cases which include spaces and symbols */
+    private static final String[] SIMPLE_FALSE = { "AC", "71", "@+" };
+
+    /** True test cases which include spaces */
+    private static final String[] WHITE_SPACE_TRUE = { " x ", " t   t  ", " 5 5", " #      # " };
+    /** False test cases which include spaces */
+    private static final String[] WHITE_SPACE_FALSE = { "m   n  ", "   8  7 ", "  ^      &  "};
+
+    /** Case-sensitive palindromes */
+    private static final String[] CASE_SENSITIVE_TRUE = { "ABba", "roTOR", "rAceCaR" };
+
+    /** Complex palindromes which include spaces, symbols, and varied capitalization */
+    private static final String[] COMPLEX_TRUE = { "fOO race CAR oof", "AbBa ZaBba", "1 3 3 7  331",
+                                                "N0 LEm0n, n0 Mel0n",
+                                                "sT RJKLEeE R#@ $A$ @# REeEL K  JRT s" };
+
     /**
-     * Checks if parameter is a palindrome using stacks and
-     * ignores whitespace + case sensitivity; doesn't ignore digits/symbols
+     * Utilizes stacks to determine if the given string is a palindrome. This method ignores whitespace and case
+     * sensitivity, but does not ignore digits or symbols.
      *
-     * @param s any chars allowed,
+     * @param s a string comprised of any character
      * @return returns true if a palindrome (ignoring whitespace and case sensitivity), false otherwise
      */
     private boolean isPalindrome(String s) {
-        return false; //remove this line and implement method body when ready
-    }
+
+        // TODO: Implement this method body using your ArrayListStack. Be mindful of your algorithm!
+        return false;
+
+    } // End of method isPalindrome
+
+    // region isPalindrome tests =======================================================================================
 
     @Test
     public void testErrors() {
@@ -29,51 +59,43 @@ public class PalindromeTester {
 
     @Test
     public void testSimpleTrueCases() {
-        assertTrue("This test is a palindrome", isPalindrome(""));
-        assertTrue("This test is a palindrome", isPalindrome(" "));
-        assertTrue("This test is a palindrome", isPalindrome("A"));
-        assertTrue("This test is a palindrome", isPalindrome("7"));
-        assertTrue("This test is a palindrome", isPalindrome("%"));
-
-        assertTrue("This test is a palindrome", isPalindrome("  "));
-        assertTrue("This test is a palindrome", isPalindrome("BB"));
-        assertTrue("This test is a palindrome", isPalindrome("33"));
-        assertTrue("This test is a palindrome", isPalindrome("**"));
+        for (int i = 0; i < SIMPLE_TRUE.length; i ++) {
+            assertTrue((i + " This test is a palindrome"), isPalindrome(SIMPLE_TRUE[i]));
+        }
     }
 
     @Test
     public void testSimpleFalseCases() {
-        assertFalse("This test is NOT a palindrome", isPalindrome("AC"));
-        assertFalse("This test is NOT a palindrome", isPalindrome("71"));
-        assertFalse("This test is NOT a palindrome", isPalindrome("@+"));
+        for (int i = 0; i < SIMPLE_FALSE.length; i ++) {
+            assertFalse((i + " This test is NOT a palindrome"), isPalindrome(SIMPLE_FALSE[i]));
+        }
     }
 
     @Test
     public void testWhitespaceCases() {
-        assertTrue("This test is a palindrome", isPalindrome(" x "));
-        assertTrue("This test is a palindrome", isPalindrome(" t   t  "));
-        assertTrue("This test is a palindrome", isPalindrome(" 5 5"));
-        assertTrue("This test is a palindrome", isPalindrome(" #      # "));
+        for (int i = 0; i < WHITE_SPACE_TRUE.length; i ++) {
+            assertTrue((i + " This test is a palindrome"), isPalindrome(WHITE_SPACE_TRUE[i]));
+        }
 
-        assertFalse("This test is NOT a palindrome", isPalindrome("m   n  "));
-        assertFalse("This test is NOT a palindrome", isPalindrome("   8  7 "));
-        assertFalse("This test is NOT a palindrome", isPalindrome("  ^      &  "));
+        for (int i = 0; i < WHITE_SPACE_FALSE.length; i ++) {
+            assertFalse((i + " This test is NOT a palindrome"), isPalindrome(WHITE_SPACE_FALSE[i]));
+        }
     }
 
     @Test
     public void testCaseSensitivityCases() {
-        assertTrue("This test is a palindrome", isPalindrome("ABba"));
-        assertTrue("This test is a palindrome", isPalindrome("roTOR"));
-        assertTrue("This test is a palindrome", isPalindrome("rAceCaR"));
+        for (int i = 0; i < CASE_SENSITIVE_TRUE.length; i ++) {
+            assertTrue((i + " This test is a palindrome"), isPalindrome(CASE_SENSITIVE_TRUE[i]));
+        }
     }
 
     @Test
     public void testComplexCases() {
-        assertTrue("This test is a palindrome", isPalindrome("fOO race CAR ooF"));
-        assertTrue("This test is a palindrome", isPalindrome("AbBa ZaBba"));
-        assertTrue("This test is a palindrome", isPalindrome("1 3 3 7  331"));
-        assertTrue("This test is a palindrome", isPalindrome("sT RJKLEeE R#@ $A$ @# REeEL K  JRT s"));
-
+        for (int i = 0; i < COMPLEX_TRUE.length; i ++) {
+            assertTrue((i + " This test is a palindrome"), isPalindrome(COMPLEX_TRUE[i]));
+        }
     }
 
-} // End of class PalindromeTest
+    // endregion isPalindrome tests ====================================================================================
+
+} // End of class PalindromeTester
