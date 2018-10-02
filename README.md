@@ -1,7 +1,7 @@
 # CS113-HW06-StackPalindrome
 ## HW #6 for CS113 - Palindrome using Stacks
 
-*[Insert Build Status Image]*
+**[//Insert Build Status Image//]**
 
 > **"I will, in fact, claim that the difference between a bad programmer and a good one is whether [they] consider [their] code or [their] data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."**
 > — Linus Torvalds
@@ -15,16 +15,33 @@ Another approach to checking for palindromes would be to store the characters of
 
 You are provided with a `StackInterface` to **implement your stack, make sure to implement the data structure using `java.util.ArrayList`** and naming your implementation `ArrayListStack` (make sure to use generics like you have been for the data structures so far).  The provided `StackTester` assumes you name your implementation that way.  Note that you have also been provided a `PalindromeTester` with the specific `isPalindrome()` method you are required to implement, following the approach above.  The method should take whitespace, case-sensitivity, digits, and symbols into account (see documentation above method).
 
-Make sure to provide a sequence diagram for `isPalindrome()`, it should include more details than just the steps outlined above.  Add the image (PNG, JPEG, etc.) in markdown in the space below:
+Make sure to **provide a sequence diagram** for `isPalindrome()`, it should include more details than just the steps outlined above.  Add the image (PNG, JPEG, etc.) in markdown in the space below:
 
-[insert sequence diagram here]
+**[//Insert Sequence Diagram//]**
 
-## Extra Credit (10pts.)
-Create the circular array implementation of the `java.util.Queue` [interface](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html), and provide a separate JUnit tester file to test the 6 methods thoroughly (see `StackTester` and use it as a guide for the level of detail to test).
+----------
+
+Additionally, **provide your implementation for a `CircularArrayQueue<E>` based on the `java.util.Queue` interface**, passing the JUnit tests provided for the following methods.
+
+`Queue` interface [methods](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html) to implement:
+
+| return type | method + description |
+|--|--|
+| `boolean` | `add(E e)` |
+| | Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions, returning true upon success and throwing an IllegalStateException if no space is currently available. |
+| `E` | `element()` |
+| | Retrieves, but does not remove, the head of this queue. |
+| `boolean` | `offer(E e)` |
+| | Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions. |
+| `E` | `peek()` |
+| | Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty. |
+| `E` | `poll()` |
+| | Retrieves and removes the head of this queue, or returns null if this queue is empty. |
+| `E` | `remove()` |
+| | Retrieves and removes the head of this queue. |
 
 ----------
 
 ### Make sure to commit + push *before* the deadline to have your code be considered for grading.
 >Pro-Tips:
 >- Read the tests thoroughly, note the situations they are testing, and devise a strategy on how to solve the palindrome checker.  Then create the sequence diagram, ensuring your logic is sound.  Finally, implement in code.
->- Attempting the Extra Credit? Try building the JUnit tests first! Use a `Queue` variable and instantiate it with a `java.util.LinkedList` object to make sure your tests are working/pass. You can follow the `StackTester` as a model (creating the `setup()` method, etc.), that way you focus on how the `Queue` data structure works.  Once you have your JUnit tester fully built, you can focus on your implementation of the data structure and swap the instantiation for your implementations constructor!
