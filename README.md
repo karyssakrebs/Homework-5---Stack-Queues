@@ -21,7 +21,7 @@ Make sure to **provide a sequence diagram** for `isPalindrome()`, it should incl
 
 ----------
 
-Additionally, **provide your implementation for a `CircularArrayQueue<E>` based on the `java.util.Queue` interface**, passing the JUnit tests provided for the following methods.
+Additionally, **provide your implementation for a `CircularArrayQueue<E>` based on the `java.util.Queue` interface**, passing the JUnit tests provided for the following six methods.
 
 `Queue` interface [methods](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html) to implement:
 
@@ -40,8 +40,12 @@ Additionally, **provide your implementation for a `CircularArrayQueue<E>` based 
 | `E` | `remove()` |
 | | Retrieves and removes the head of this queue. |
 
+Methods inherited from [interface](https://docs.oracle.com/javase/7/docs/api/java/util/Collection.html) `java.util.Collection`:
+
+`addAll`, `clear`, `contains`, `containsAll`, `equals`, `hashCode`, `isEmpty`, `iterator`, `remove`, `removeAll`, `retainAll`, `size`, `toArray`, `toArray`
+
 ----------
 
 ### Make sure to commit + push *before* the deadline to have your code be considered for grading.
->Pro-Tips:
+>Pro-Tip:
 >- Read the tests thoroughly, note the situations they are testing, and devise a strategy on how to solve the palindrome checker.  Then create the sequence diagram, ensuring your logic is sound.  Finally, implement in code.
