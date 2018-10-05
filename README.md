@@ -1,10 +1,10 @@
-# CS113-HW06-StackPalindrome
-## HW #6 for CS113 - Palindrome using Stacks
+# CS113-HW06-StackQueue
+## HW #6 for CS113 - Stack + Queue Implementation, Solving Palindrome using Stacks
 
 **[//Insert Build Status Image//]**
 
 > **"I will, in fact, claim that the difference between a bad programmer and a good one is whether [they] consider [their] code or [their] data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."**
-> — Linus Torvalds
+> — Linus Torvalds [recent news on Linus Torvalds](https://www.newyorker.com/science/elements/after-years-of-abusive-e-mails-the-creator-of-linux-steps-aside)
 
 > **"Smart data structures and dumb code works a lot better than the other way around."**
 > — Eric S. Raymond
@@ -49,3 +49,4 @@ Methods inherited from [interface](https://docs.oracle.com/javase/7/docs/api/jav
 ### Make sure to commit + push *before* the deadline to have your code be considered for grading.
 >Pro-Tip:
 >- Read the tests thoroughly, note the situations they are testing, and devise a strategy on how to solve the palindrome checker.  Then create the sequence diagram, ensuring your logic is sound.  Finally, implement in code.
+>- Make sure to do the book reading, there's lots of code in there to help you along!
