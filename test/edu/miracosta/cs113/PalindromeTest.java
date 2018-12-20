@@ -7,13 +7,13 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 /**
- * PalindromeTester : a test class for isPalindrome, a method intended to utilize stacks to evaluate if a given
+ * PalindromeTest : a test class for isPalindrome, a method intended to utilize stacks to evaluate if a given
  * string is a palindrome.
  *
  * A palindrome is a word, phrase, number, or other sequence of characters which reads the same backwards as it does
  * forwards. Such sequences include "madam," "top spot," or "no lemon, no melon".
  */
-public class PalindromeTester {
+public class PalindromeTest {
 
     /** True test cases which include spaces and symbols */
     private static final String[] SIMPLE_TRUE = { "", " ", "A", "7", "%", "  ", "BB", "33", "**" };
@@ -42,12 +42,11 @@ public class PalindromeTester {
      */
     private boolean isPalindrome(String s) {
 
-        // TODO: Implement this method body using your ArrayListStack. Be mindful of your algorithm!
+        // TODO:
+        // Implement this method body using your ArrayListStack. Be mindful of your algorithm!
         return false;
 
     } // End of method isPalindrome
-
-    // region isPalindrome tests =======================================================================================
 
     @Test
     public void testErrors() {
@@ -72,11 +71,14 @@ public class PalindromeTester {
     }
 
     @Test
-    public void testWhitespaceCases() {
+    public void testWhitespaceTrueCases() {
         for (int i = 0; i < WHITE_SPACE_TRUE.length; i ++) {
             assertTrue((i + " This test is a palindrome"), isPalindrome(WHITE_SPACE_TRUE[i]));
         }
+    }
 
+    @Test
+    public void testWhitespaceFalseCases() {
         for (int i = 0; i < WHITE_SPACE_FALSE.length; i ++) {
             assertFalse((i + " This test is NOT a palindrome"), isPalindrome(WHITE_SPACE_FALSE[i]));
         }
@@ -96,6 +98,4 @@ public class PalindromeTester {
         }
     }
 
-    // endregion isPalindrome tests ====================================================================================
-
-} // End of class PalindromeTester
+} // End of class PalindromeTest

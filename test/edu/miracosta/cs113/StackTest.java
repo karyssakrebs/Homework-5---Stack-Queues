@@ -11,9 +11,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 /**
- * StackTester : a test class for the given StackInterface implementation using an ArrayList.
+ * StackTest : a test class for the given StackInterface implementation using an ArrayList.
  */
-public class StackTester {
+public class StackTest {
 
     /** An object which implements StackInterface. */
     private StackInterface<Integer> stack;
@@ -96,4 +96,4 @@ public class StackTester {
         } catch (EmptyStackException ese) { /* Test Passed! */ }
     }
 
-} // End of class StackTester
+} // End of class StackTest
