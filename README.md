@@ -1,5 +1,5 @@
-# CS113-HW06-StackQueue
-## HW #6 for CS113 - Stack + Queue Implementation, Solving Palindrome using Stacks
+# CS113-HW05-StackQueue
+## HW #5 for CS113 - Stack + Queue Implementation, Solving Palindrome using Stacks
 
 **[//Insert Build Status Image//]**
 
