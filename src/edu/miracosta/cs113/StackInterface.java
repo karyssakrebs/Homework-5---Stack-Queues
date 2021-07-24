@@ -1,7 +1,9 @@
 package edu.miracosta.cs113;
 
-public interface StackInterface<E> {
 
+
+public interface StackInterface<E> {
+	
     /**
      * Returns true if the stack is empty; otherwise, returns false
      *
